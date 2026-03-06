@@ -3,12 +3,12 @@ dbt_twitch_profile:
   outputs:
     dev:
       type: snowflake
-      account: PXFTMEP-PM48808
+      account: PXXXXX-XX44444
 
-      user: SVC_USER_WITH_PW
-      password: LKJDSFlksjflkEJF4oikflj50iokldfjlkdsfj3409OIJLSDfk&sdlfksd3!
+      user: TWITCH_USER
+      password: sidfj409rJJSLIDkfjkdsfj9304iojfsdkljf3iklfsd
 
-      role: SVC_ROLE
+      role: TWITCH_ROLE
       database: TWITCHERS
       warehouse: COMPUTE_WH
       schema: YEYE
