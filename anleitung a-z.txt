@@ -1,0 +1,47 @@
+docker inschtallieren
+
+nachdem man airflow zieht, muss man eigene copie erstellen:
+docker tag apache/airflow mdaacram/airflow
+
+docker-compose.yml erstellen
+
+einloggen in port 4917:
+admin
+9eGvqcXXSFdBdCpR
+
+alles ist im container installiert. 
+
+container öffnen mit cmd, um sich drin umzusehen:
+docker exec -it mein-airflow bash
+do something: python --version
+
+python für snowflake connection zum glück im airflow container vorinstalliert. (sonst hätte ich dockerfile mache müse)
+
+snowflake conn anlegen:
+snowflaky_kp_conn
+login: svc_user_with_pw
+
+test connections using a dag (not possible over ui, cuz of SQlite db ..)
+test_connections_dag
+-> grün
+
+twitch get streams dag:
+twitch_get_streams_dag
+-> grün (mit output als comment)
+
+Airflow 3 fixes:
+- schedule instead of schedule_interval
+- days_ago not used
+Important:
+- apache-airflow-providers-snowflake is installed in the airflow container!
+
+
+
+
+
+
+
+
+
+
+

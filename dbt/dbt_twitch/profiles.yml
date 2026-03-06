@@ -1,0 +1,15 @@
+dbt_twitch_profile:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: PXXXXX-XX44444
+
+      user: TWITCH_USER
+      password: sidfj409rJJSLIDkfjkdsfj9304iojfsdkljf3iklfsd
+
+      role: TWITCH_ROLE
+      database: TWITCHERS
+      warehouse: COMPUTE_WH
+      schema: YEYE
+      threads: 4
