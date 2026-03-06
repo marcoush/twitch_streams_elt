@@ -1,0 +1,23 @@
+services:
+
+  airflow:
+    build: .
+    container_name: twitch-airflow-container
+    ports:
+      - "8080:8080"
+    volumes:
+      # dags project folder
+      - "E:/____koloko____/2 Learning/02 WORK/data engineering/airflow/dags:/opt/airflow/dags"
+      # dbt project folder
+      - "E:/____koloko____/2 Learning/02 WORK/data engineering/airflow/dbt:/opt/airflow/dbt"
+      # Named volume for the DB and keys to avoid Windows file-locking issues
+      - airflow_db:/opt/airflow/db_data
+      - airflow_keys:/opt/airflow/keys
+    environment:
+      # Airflow puts DB inside stable volume
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/db_data/airflow.db
+    command: standalone
+
+volumes:
+  airflow_db:
+  airflow_keys:

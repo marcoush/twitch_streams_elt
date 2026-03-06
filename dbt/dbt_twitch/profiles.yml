@@ -1,0 +1,15 @@
+dbt_twitch_profile:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: PXFTMEP-PM48808
+
+      user: SVC_USER_WITH_PW
+      password: LKJDSFlksjflkEJF4oikflj50iokldfjlkdsfj3409OIJLSDfk&sdlfksd3!
+
+      role: SVC_ROLE
+      database: TWITCHERS
+      warehouse: COMPUTE_WH
+      schema: YEYE
+      threads: 4
