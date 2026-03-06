@@ -79,7 +79,7 @@ GRANT ALL PRIVILEGES ON FUTURE FUNCTIONS IN DATABASE TWITCHERS TO ROLE TWITCH_RO
 GRANT ALL PRIVILEGES ON FUTURE PROCEDURES IN DATABASE TWITCHERS TO ROLE TWITCH_ROLE;
 ```
 
-# Docker container setup
+## Docker container setup
 
 Now, let's start the container. 
 
@@ -88,6 +88,10 @@ Open CMD on your PC, navigate to the git repository folder and run:
 cd "E:\0_git_repos\twitch_streams_elt"
 docker compose build && docker compose up -d
 ```
+
+## dbt setup
+
+Change the profiles.yml file to your needs!
 
 ## Airflow setup & run
 
